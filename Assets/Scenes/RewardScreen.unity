@@ -333,7 +333,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 1.5
+  delay: 1.3
   duration: 0.3
   steeperCurves: 0
   tweenGroup: 0
@@ -817,8 +817,9 @@ GameObject:
   m_Component:
   - component: {fileID: 398704939}
   - component: {fileID: 398704940}
+  - component: {fileID: 398704941}
   m_Layer: 5
-  m_Name: Label
+  m_Name: ExpRewardNum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -878,9 +879,9 @@ MonoBehaviour:
   keepAspectRatio: 0
   aspectRatio: 1.9354838
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 440fba6cf9c18694bb56a50f16361952, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: 56777f43c102ac546b03434587bd6136, type: 3}
   mFont: {fileID: 0}
-  mText: 390
+  mText: 100
   mFontSize: 50
   mFontStyle: 0
   mAlignment: 1
@@ -908,6 +909,26 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &398704941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398704938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371fbc932e8644448b31c101118f191b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EndNum: 0
+  InitialNum: 330
+  IsAdd: 0
+  CurrentValue: 0
+  isExp: 0
+  TotalExp: {fileID: 0}
+  IsLevelup: 0
+  ChangeTime: 0.5
 --- !u!1 &491747351
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,6 +999,107 @@ MonoBehaviour:
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
+--- !u!1 &517407277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 517407278}
+  - component: {fileID: 517407279}
+  m_Layer: 5
+  m_Name: MaxNum
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &517407278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517407277}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 60, y: 0, z: 0}
+  m_LocalScale: {x: 1.0008, y: 1.0008, z: 1.0008}
+  m_Children: []
+  m_Father: {fileID: 1298526491}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &517407279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517407277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  rightAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  bottomAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  topAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  updateAnchors: 1
+  mColor: {r: 0.9056604, g: 0.8757565, b: 0.8757565, a: 1}
+  mPivot: 4
+  mWidth: 102
+  mHeight: 26
+  mDepth: 2
+  mMat: {fileID: 0}
+  autoResizeBoxCollider: 0
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 3.9230769
+  keepCrispWhenShrunk: 1
+  mTrueTypeFont: {fileID: 12800000, guid: 56777f43c102ac546b03434587bd6136, type: 3}
+  mFont: {fileID: 0}
+  mText: 300
+  mFontSize: 40
+  mFontStyle: 0
+  mAlignment: 1
+  mEncoding: 1
+  mMaxLineCount: 0
+  mEffectStyle: 2
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 1, y: 1}
+  mOverflow: 0
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  mSpacingX: 0
+  mSpacingY: 0
+  mUseFloatSpacing: 0
+  mFloatSpacingX: 0
+  mFloatSpacingY: 0
+  mOverflowEllipsis: 0
+  mOverflowWidth: 0
+  mOverflowHeight: 0
+  mModifier: 0
+  mShrinkToFit: 0
+  mMaxLineWidth: 0
+  mMaxLineHeight: 0
+  mLineWidth: 0
+  mMultiline: 1
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,7 +1136,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.2953008, g: 0.7924528, b: 0.77393603, a: 0.60784316}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.60784316}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -1538,7 +1660,7 @@ GameObject:
   - component: {fileID: 641843658}
   - component: {fileID: 641843659}
   m_Layer: 5
-  m_Name: Label
+  m_Name: GoldRewardNum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1598,7 +1720,7 @@ MonoBehaviour:
   keepAspectRatio: 0
   aspectRatio: 1.9354838
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 440fba6cf9c18694bb56a50f16361952, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: 56777f43c102ac546b03434587bd6136, type: 3}
   mFont: {fileID: 0}
   mText: 150
   mFontSize: 50
@@ -1640,10 +1762,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 371fbc932e8644448b31c101118f191b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endNum: 0
-  initialNum: 150
-  isAdd: 0
-  change_time: 1
+  EndNum: 0
+  InitialNum: 150
+  IsAdd: 0
+  CurrentValue: 0
+  isExp: 0
+  TotalExp: {fileID: 0}
+  IsLevelup: 0
+  ChangeTime: 0.5
 --- !u!1 &731527439
 GameObject:
   m_ObjectHideFlags: 0
@@ -2291,7 +2417,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 2
+  delay: 1.8
   duration: 0.2
   steeperCurves: 0
   tweenGroup: 0
@@ -2437,8 +2563,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 1.2
-  duration: 0.4
+  delay: 1
+  duration: 0.3
   steeperCurves: 0
   tweenGroup: 0
   useFixedUpdate: 0
@@ -2585,7 +2711,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 2.2
+  delay: 2
   duration: 0.4
   steeperCurves: 0
   tweenGroup: 0
@@ -2853,6 +2979,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1843686859}
+  - {fileID: 517407278}
+  - {fileID: 1924832881}
   m_Father: {fileID: 1832997409}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3047,7 +3175,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0.5
-  duration: 0.5
+  duration: 0.2
   steeperCurves: 0
   tweenGroup: 0
   useFixedUpdate: 0
@@ -3192,8 +3320,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 0.8
-  duration: 0.5
+  delay: 0.6
+  duration: 0.2
   steeperCurves: 0
   tweenGroup: 0
   useFixedUpdate: 0
@@ -3721,7 +3849,7 @@ MonoBehaviour:
   keepAspectRatio: 0
   aspectRatio: 1.9354838
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 440fba6cf9c18694bb56a50f16361952, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: 56777f43c102ac546b03434587bd6136, type: 3}
   mFont: {fileID: 0}
   mText: 200
   mFontSize: 50
@@ -3763,10 +3891,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 371fbc932e8644448b31c101118f191b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endNum: 350
-  initialNum: 200
-  isAdd: 1
-  change_time: 1.5
+  EndNum: 350
+  InitialNum: 200
+  IsAdd: 1
+  CurrentValue: 0
+  isExp: 0
+  TotalExp: {fileID: 0}
+  IsLevelup: 0
+  ChangeTime: 2
 --- !u!1 &1818530440
 GameObject:
   m_ObjectHideFlags: 0
@@ -3777,6 +3909,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1818530441}
   - component: {fileID: 1818530442}
+  - component: {fileID: 1818530443}
   m_Layer: 5
   m_Name: ExpIcon
   m_TagString: Untagged
@@ -3853,6 +3986,65 @@ MonoBehaviour:
   mAtlas: {fileID: 11400000, guid: 196303407372726488c37fabb55d8625, type: 2}
   mSpriteName: bttle_icon_EXP
   mFillCenter: 1
+--- !u!114 &1818530443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818530440}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e7459110b9666449485c40f25362a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 1
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.4043176
+      value: 2.0829554
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 0.05
+  steeperCurves: 0
+  tweenGroup: 0
+  useFixedUpdate: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: {x: 1, y: 1, z: 1}
+  to: {x: 1.5, y: 1.5, z: 1}
+  updateTable: 0
 --- !u!1 &1832997408
 GameObject:
   m_ObjectHideFlags: 0
@@ -3864,6 +4056,7 @@ GameObject:
   - component: {fileID: 1832997409}
   - component: {fileID: 1832997411}
   - component: {fileID: 1832997410}
+  - component: {fileID: 1832997412}
   m_Layer: 5
   m_Name: ExpBar
   m_TagString: Untagged
@@ -3967,6 +4160,20 @@ MonoBehaviour:
   mAtlas: {fileID: 11400000, guid: 196303407372726488c37fabb55d8625, type: 2}
   mSpriteName: bar_bar_bg
   mFillCenter: 1
+--- !u!114 &1832997412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832997408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b78d9b4d3e37184db72369d3d8cf418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentExp: {fileID: 1843686858}
+  totalExp: {fileID: 517407277}
 --- !u!1 &1843686858
 GameObject:
   m_ObjectHideFlags: 0
@@ -3977,8 +4184,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1843686859}
   - component: {fileID: 1843686860}
+  - component: {fileID: 1843686861}
   m_Layer: 5
-  m_Name: Label
+  m_Name: CurrentNum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3992,7 +4200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843686858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -1, z: 0}
+  m_LocalPosition: {x: -59, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1298526491}
@@ -4029,21 +4237,21 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0.9056604, g: 0.8757565, b: 0.8757565, a: 1}
   mPivot: 4
-  mWidth: 132
-  mHeight: 24
+  mWidth: 102
+  mHeight: 26
   mDepth: 2
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5.5
+  aspectRatio: 3.9230769
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 56777f43c102ac546b03434587bd6136, type: 3}
   mFont: {fileID: 0}
-  mText: 30/400
+  mText: 30
   mFontSize: 40
   mFontStyle: 0
-  mAlignment: 0
+  mAlignment: 3
   mEncoding: 1
   mMaxLineCount: 0
   mEffectStyle: 2
@@ -4068,6 +4276,26 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &1843686861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843686858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371fbc932e8644448b31c101118f191b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EndNum: 360
+  InitialNum: 30
+  IsAdd: 1
+  CurrentValue: 0
+  isExp: 1
+  TotalExp: {fileID: 517407277}
+  IsLevelup: 0
+  ChangeTime: 2
 --- !u!1 &1912034039
 GameObject:
   m_ObjectHideFlags: 0
@@ -4203,8 +4431,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 1
-  duration: 0.5
+  delay: 0.8
+  duration: 0.2
   steeperCurves: 0
   tweenGroup: 0
   useFixedUpdate: 0
@@ -4225,6 +4453,7 @@ GameObject:
   - component: {fileID: 1920296902}
   - component: {fileID: 1920296903}
   - component: {fileID: 1920296904}
+  - component: {fileID: 1920296905}
   m_Layer: 5
   m_Name: Reward1
   m_TagString: Untagged
@@ -4350,17 +4579,140 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 2
+  delay: 1.8
   duration: 0.4
   steeperCurves: 0
   tweenGroup: 0
   useFixedUpdate: 0
-  onFinished: []
+  onFinished:
+  - mTarget: {fileID: 1920296905}
+    mMethodName: beginCreate
+    mParameters: []
+    oneShot: 0
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: {x: 0, y: 0, z: 0}
   to: {x: 1, y: 1, z: 1}
   updateTable: 0
+--- !u!114 &1920296905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920296901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8807249d80afa064993ef74e03c224a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewItem: {fileID: 6531832005339764393, guid: 24f7572f90a6a88418caee02602c92d5, type: 3}
+  NewItemNumber: {fileID: 1843686858}
+  LowerItemNumber: {fileID: 398704938}
+  ShakingIcon: {fileID: 1818530440}
+  from: {fileID: 1920296902}
+  to: {fileID: 1818530441}
+--- !u!1 &1924832880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1924832881}
+  - component: {fileID: 1924832882}
+  m_Layer: 5
+  m_Name: Slash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1924832881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924832880}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.000015258789, y: -0.9999695, z: 0}
+  m_LocalScale: {x: 1.0008, y: 1.0008, z: 1.0008}
+  m_Children: []
+  m_Father: {fileID: 1298526491}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1924832882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924832880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  rightAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  bottomAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  topAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  updateAnchors: 1
+  mColor: {r: 0.9056604, g: 0.8757565, b: 0.8757565, a: 1}
+  mPivot: 4
+  mWidth: 132
+  mHeight: 24
+  mDepth: 2
+  mMat: {fileID: 0}
+  autoResizeBoxCollider: 0
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 5.5
+  keepCrispWhenShrunk: 1
+  mTrueTypeFont: {fileID: 12800000, guid: 56777f43c102ac546b03434587bd6136, type: 3}
+  mFont: {fileID: 0}
+  mText: /
+  mFontSize: 40
+  mFontStyle: 0
+  mAlignment: 0
+  mEncoding: 1
+  mMaxLineCount: 0
+  mEffectStyle: 2
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 1, y: 1}
+  mOverflow: 0
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  mSpacingX: 0
+  mSpacingY: 0
+  mUseFloatSpacing: 0
+  mFloatSpacingX: 0
+  mFloatSpacingY: 0
+  mOverflowEllipsis: 0
+  mOverflowWidth: 0
+  mOverflowHeight: 0
+  mModifier: 0
+  mShrinkToFit: 0
+  mMaxLineWidth: 0
+  mMaxLineHeight: 0
+  mLineWidth: 0
+  mMultiline: 1
 --- !u!1 &1944638164
 GameObject:
   m_ObjectHideFlags: 0
@@ -4665,7 +5017,7 @@ MonoBehaviour:
   keepAspectRatio: 0
   aspectRatio: 1.9354838
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 440fba6cf9c18694bb56a50f16361952, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: 56777f43c102ac546b03434587bd6136, type: 3}
   mFont: {fileID: 0}
   mText: 200
   mFontSize: 50
@@ -4705,8 +5057,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2131195615}
   - component: {fileID: 2131195616}
+  - component: {fileID: 2131195617}
   m_Layer: 5
-  m_Name: Label
+  m_Name: LevelNum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4796,3 +5149,16 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &2131195617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131195614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d3d1d34b7fa29246a9631dcea838a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExpNum: {fileID: 1843686858}

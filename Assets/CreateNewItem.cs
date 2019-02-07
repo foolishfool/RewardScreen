@@ -41,11 +41,10 @@ public class CreateNewItem : MonoBehaviour
     IEnumerator startCreate()
     {
      
-        while (createTime > 0)
+        while (createTime > 0 )
         {
             createTime -= Time.deltaTime;
-            // print("Resources/Prefabs/" + NewItem.ToString());
-            newItem = Instantiate(Resources.Load<GameObject>("Prefabs/NewGold"), gameObject.transform.position, Quaternion.identity) as GameObject;
+            newItem = Instantiate(Resources.Load<GameObject>("Prefabs/"+ NewItem.name.ToString().Trim()), gameObject.transform.position, Quaternion.identity) as GameObject;
             newItem.GetComponent<TweenTransform>().from = from;
             newItem.GetComponent<TweenTransform>().to = to;
             newItem.GetComponent<TweenTransform>().PlayForward();

@@ -79,7 +79,7 @@ PlayerSettings:
   usePlayerLog: 1
   bakeCollisionMeshes: 0
   forceSingleInstance: 0
-  resizableWindow: 0
+  resizableWindow: 1
   useMacAppStoreValidation: 0
   macAppStoreCategory: public.app-category.games
   gpuSkinning: 1
@@ -250,7 +250,7 @@ PlayerSettings:
     height: 180
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
-  resolutionDialogBanner: {fileID: 2800000, guid: d915f0536f263064ea03068b9a772af8,
+  resolutionDialogBanner: {fileID: 2800000, guid: 3231ac086b2b35f46ac2338146280fba,
     type: 3}
   m_BuildTargetIcons: []
   m_BuildTargetPlatformIcons: []

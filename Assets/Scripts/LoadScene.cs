@@ -23,7 +23,8 @@ public class LoadScene : MonoBehaviour
         {
             if (Input.anyKey)
             {
-                SceneManager.LoadScene(SceneID);
+               SceneManager.UnloadSceneAsync(scene.buildIndex);
+               SceneManager.LoadScene(SceneID);
             }
         }
         
