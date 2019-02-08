@@ -12,9 +12,10 @@ public class RollingNumbers : MonoBehaviour
     public bool isExp;
     public GameObject TotalExp;
     public bool IsLevelup;
+    public ParticleSystem LevelUpEffect;
 
     private int result = 0;
-    public float ChangeTime = 2f; //rolling time
+    public float ChangeTime; //rolling time
 
     private int change_number;
     private int difference;
@@ -82,6 +83,7 @@ public class RollingNumbers : MonoBehaviour
                             CurrentValue += change_number;
                             GetComponent<UILabel>().text = CurrentValue.ToString();
                             GetComponent<AudioSource>().Play();
+                            LevelUpEffect.Play();
                             yield return new WaitForSeconds(0.05f);     // add by every 0.05s
                         }
                     }

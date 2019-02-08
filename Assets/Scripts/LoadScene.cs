@@ -12,7 +12,9 @@ public class LoadScene : MonoBehaviour
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene(SceneID);
+        GetComponents<TweenScale>()[0].enabled = true;
+        GetComponents<TweenScale>()[0].PlayForward();
+        Invoke("EnterNextScene", 0.5f);
     }
 
     void Update()

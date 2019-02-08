@@ -12,16 +12,16 @@ public class CreateNewItem : MonoBehaviour
     //the item nubmer label at the lower eara of the UI
     public GameObject LowerItemNumber;
     //icon of new item
-    public GameObject ShakingIcon;
+    public List<GameObject> ShakingIcons;
     //the from position and to position of new created item
-    public Transform from;
+    public List<Transform> froms;
     public Transform to;
 
     private GameObject newItem;
 
     private bool isShaking = true;  
     //time of genetate newitem
-    private float createTime = 0.3f;
+    private float createTime = 0.2f;
 
     void Start()
     {
@@ -33,8 +33,12 @@ public class CreateNewItem : MonoBehaviour
     {
         if (!isShaking)
         {
-            ShakingIcon.GetComponent<TweenScale>().enabled = false;
-            ShakingIcon.transform.localScale = new Vector3(1f, 1f, 1f);
+            for (int i = 0; i < ShakingIcons.Count; i++)
+            {
+                ShakingIcons[i].GetComponent<TweenScale>().enabled = false;
+                ShakingIcons[i].transform.localScale = new Vector3(1f, 1f, 1f);
+            }
+
         }
     }
 
@@ -45,7 +49,8 @@ public class CreateNewItem : MonoBehaviour
         {
             createTime -= Time.deltaTime;
             newItem = Instantiate(Resources.Load<GameObject>("Prefabs/"+ NewItem.name.ToString().Trim()), gameObject.transform.position, Quaternion.identity) as GameObject;
-            newItem.GetComponent<TweenTransform>().from = from;
+            int randomIndex = Random.Range(0, froms.Count);
+            newItem.GetComponent<TweenTransform>().from = froms[randomIndex];
             newItem.GetComponent<TweenTransform>().to = to;
             newItem.GetComponent<TweenTransform>().PlayForward();
             newItem.GetComponent<TweenTransform>().AddOnFinished(startRolling);
@@ -77,7 +82,11 @@ public class CreateNewItem : MonoBehaviour
         //shaking animation of icon
         if (isShaking)
         {
-            ShakingIcon.GetComponent<TweenScale>().enabled = true;
+            for (int i = 0; i < ShakingIcons.Count; i++)
+            {
+                print(ShakingIcons[i].name);
+                ShakingIcons[i].GetComponent<TweenScale>().enabled = true;
+            }       
         }
 
     }
