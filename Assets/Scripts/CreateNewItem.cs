@@ -49,7 +49,11 @@ public class CreateNewItem : MonoBehaviour
             newItem.GetComponent<TweenTransform>().to = to;
             newItem.GetComponent<TweenTransform>().PlayForward();
             newItem.GetComponent<TweenTransform>().AddOnFinished(startRolling);
-
+            if (newItem.GetComponent<AudioSource>())
+            {
+                newItem.GetComponent<AudioSource>().Play();
+            }
+           
             float interval = Random.Range(0.05f, 0.2f);
             
             yield return new WaitForSeconds(interval);//every 0.05 second create a new item

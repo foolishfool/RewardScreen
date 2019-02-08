@@ -29,11 +29,8 @@ public class RollingNumbers : MonoBehaviour
 
     private void Update()
     {
-        if (name == "CurrentNum")
-        {
-            print(CurrentValue.ToString());
-        }
-     
+
+  
     }
 
     public void StartRolling()
@@ -67,15 +64,15 @@ public class RollingNumbers : MonoBehaviour
                         while (CurrentValue < EndNum && !IsLevelup)
                         {
                             CurrentValue += change_number;
+                            //if level up
+                            if (CurrentValue >= currentTotalExp)
+                            {
+                                IsLevelup = true;
+                                CurrentValue -= currentTotalExp;
+                            }
                             GetComponent<UILabel>().text = CurrentValue.ToString();
-                            print("1");
                             yield return new WaitForSeconds(0.05f);     // add by every 0.05s
                         }
-                    }
-                    else if (CurrentValue >= currentTotalExp && !IsLevelup)//level up
-                    {
-                        IsLevelup = true;
-                        CurrentValue -= currentTotalExp;
                     }
 
                     if (IsLevelup)
@@ -84,7 +81,7 @@ public class RollingNumbers : MonoBehaviour
                         {
                             CurrentValue += change_number;
                             GetComponent<UILabel>().text = CurrentValue.ToString();
-                            print("2");
+                            GetComponent<AudioSource>().Play();
                             yield return new WaitForSeconds(0.05f);     // add by every 0.05s
                         }
                     }

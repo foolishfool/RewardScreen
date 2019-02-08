@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour
 {
     public int SceneID;
+    public GameObject shakingItem;
+
+    
 
     public void LoadLevel()
     {
@@ -23,10 +26,18 @@ public class LoadScene : MonoBehaviour
         {
             if (Input.anyKey)
             {
-               SceneManager.UnloadSceneAsync(scene.buildIndex);
-               SceneManager.LoadScene(SceneID);
+               GetComponent<AudioSource>().Play();
+               shakingItem.GetComponent<TweenScale>().enabled = true;
+               shakingItem.GetComponent<TweenScale>().PlayForward();
+               Invoke("EnterNextScene",0.8f);
+        
             }
         }
         
+    }
+
+    private void EnterNextScene()
+    {
+        SceneManager.LoadScene(SceneID);
     }
 }
