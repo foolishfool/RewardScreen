@@ -49,6 +49,7 @@ public class CreateNewItem : MonoBehaviour
             newItem.GetComponent<TweenTransform>().to = to;
             newItem.GetComponent<TweenTransform>().PlayForward();
             newItem.GetComponent<TweenTransform>().AddOnFinished(startRolling);
+
             if (newItem.GetComponent<AudioSource>())
             {
                 newItem.GetComponent<AudioSource>().Play();
