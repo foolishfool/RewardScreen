@@ -28303,7 +28303,7 @@ MonoBehaviour:
   TotalExp: {fileID: 0}
   IsLevelup: 0
   LevelUpEffect: {fileID: 0}
-  ChangeTime: 5
+  ChangeTime: 1.5
 --- !u!1 &1818530440
 GameObject:
   m_ObjectHideFlags: 0
@@ -28702,7 +28702,7 @@ MonoBehaviour:
   TotalExp: {fileID: 517407277}
   IsLevelup: 0
   LevelUpEffect: {fileID: 48176752}
-  ChangeTime: 5
+  ChangeTime: 1.5
 --- !u!82 &1843686862
 AudioSource:
   m_ObjectHideFlags: 0
