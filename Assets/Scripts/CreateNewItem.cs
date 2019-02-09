@@ -21,7 +21,7 @@ public class CreateNewItem : MonoBehaviour
 
     private bool isShaking = true;  
     //time of genetate newitem
-    private float createTime = 0.2f;
+    private float createTime = 0.15f;
 
     void Start()
     {
